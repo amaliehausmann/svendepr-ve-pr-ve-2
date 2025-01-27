@@ -3,22 +3,22 @@
 export const navLinks = [
   {
     link: "/",
-    title: "FORSIDE",
+    title: "forside",
   },
   {
     link: "/hotels",
-    title: "HOTELLER & DESTINATIONER",
+    title: "hoteller & destinationer",
   },
   {
     link: "/rooms",
-    title: "VÆRELSER",
+    title: "værelser",
   },
   {
     link: "/reservation",
-    title: "RESERVATION",
+    title: "reservation",
   },
   {
     link: "/login",
-    title: "LOGIN",
+    title: "login",
   },
 ];

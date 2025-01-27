@@ -1,17 +1,25 @@
+@use "../../styles/variables" as *;
+
 .headerStyling {
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: 0 5vw;
-  box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.16);
-  -webkit-box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.16);
-  background-color: black;
+  background-color: $black;
+  padding: 1vw 8vw;
+  padding-top: 1.5vw;
+
+  img {
+    width: 20%;
+    height: 100%;
+    display: block;
+    margin-top: auto;
+  }
 
   span {
     display: none;
     svg {
       font-size: 10vw;
+      color: $white;
     }
   }
 

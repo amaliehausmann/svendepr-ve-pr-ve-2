@@ -1,6 +1,42 @@
 //Basestyling
-.sectionStyling{
-    padding: 2vw;
+.sectionStyling {
+  padding: 4vw 8vw;
+  display: block;
+  margin: auto;
 }
 
-//Custom Styling
+//Custom
+
+.singleNews {
+  img {
+    width: 100%;
+  }
+  span {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      font-size: 1.7vw;
+      color: black;
+      text-decoration: none;
+      margin: auto 0 auto auto;
+
+      svg {
+        vertical-align: -4px;
+      }
+    }
+  }
+
+  h6 {
+    font-weight: 500;
+    &:first-of-type {
+      font-style: italic;
+      margin-bottom: 1vw;
+    }
+
+    &:last-of-type {
+      font-style: italic;
+      margin-top: 2vw;
+    }
+  }
+}

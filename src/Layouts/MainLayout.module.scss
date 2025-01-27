@@ -1,15 +1,21 @@
+@use '../styles/placeholders' as *;
+@use '../styles/variables' as *;
+
 //Indsæt styling her
 .mainLayout {
 
+  //bg color
+  background-color: $background;
+
   //Font
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  @extend %opensans;
 
   //Font sizing
   h1 {
-    font-size: 4vw;
+    font-size: 2.2vw;
 
     @media screen and (max-width: 1300px) {
-      font-size: 4.5vw;
+      font-size: 4.2vw;
     }
 
     @media screen and (max-width: 1050px) {
@@ -35,7 +41,7 @@
   }
 
   h3 {
-    font-size: 3vw;
+    font-size: 1.7vw;
     @media screen and (max-width: 1300px) {
       font-size: 3.5vw;
     }
@@ -74,7 +80,7 @@
   }
 
   h6 {
-    font-size: 1.7vw;
+    font-size: 1.1vw;
     @media screen and (max-width: 1300px) {
       font-size: 2.2vw;
     }
@@ -86,16 +92,16 @@
     }
   }
 
-  p, label, input, ::placeholder, select {
-    font-size: 1.2vw;
+  p, label, input, ::placeholder, select, a {
+    font-size: 0.8vw;
     @media screen and (max-width: 1300px) {
-      font-size: 1.7vw;
+      font-size: 1.3vw;
     }
     @media screen and (max-width: 1050px) {
-      font-size: 2.2vw;
+      font-size: 1.8vw;
     }
     @media screen and (max-width: 750px) {
-      font-size: 4.2vw;
+      font-size: 3.8vw;
     }
   }
 

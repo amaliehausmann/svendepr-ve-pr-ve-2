@@ -29,9 +29,28 @@
 .column-8 {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
+.one{
+  gap: 1vw;
+}
+.two{
+  gap: 2vw;
+}
+
+.three{
+  gap: 3vw;
+}
+
+.four{
+  gap: 4vw;
+}
+
+.six{
+  gap: 6vw;
+}
 
 .gridStyling {
   display: grid;
+
 
   @media screen and (max-width: 750px) {
     grid-template-columns: 1fr;

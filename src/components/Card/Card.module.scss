@@ -1,15 +1,61 @@
-//BaseStyling
-.cardStyling{
-  img{
+@use "../../styles/variables" as *;
+
+// Base Styling
+.cardStyling {
+  img {
     width: 100%;
-  }  
-
-  h1{
-    text-align: center;
-  }
-
-  p{
   }
 }
 
-//Custom Styling
+// Custom Styling
+.threeCards {
+  background-color: $white;
+  cursor: pointer;
+  height: 40vh;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  filter: drop-shadow(5px 5px 5px #00000015);
+
+  h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    transition: white-space 0.3s ease;
+  }
+
+  img {
+    height: 75%;
+    object-fit: cover;
+    transition: height 0.3s ease;
+  }
+
+  div {
+    padding: 1vw;
+    height: 25%;
+    transition: height 0.3s ease;
+
+    p {
+      display: none;
+    }
+  }
+
+  &:hover {
+    img {
+      height: 25%;
+    }
+
+    h3 {
+      white-space: normal;
+      color: $red;
+    }
+
+    div {
+      height: 75%;
+
+      p {
+        display: block;
+      }
+    }
+  }
+}

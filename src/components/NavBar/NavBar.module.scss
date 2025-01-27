@@ -1,20 +1,25 @@
+@use "../../styles/variables" as *;
+
 .navStyling {
   ul {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 3vw;
 
     li {
       list-style: none;
-      padding: 2vw 4vw;
+      padding: 0 1.5vw;
+      border-right: 1px solid $white;
+      font-weight: 600;
 
-      &:hover {
-        transition: ease 0.3s;
-        background-color: rgba(255, 255, 255, 0.1);
+      &:last-of-type {
+        border-right: none;
       }
 
       a {
         color: white;
         text-decoration: none;
+        text-transform: uppercase;
 
         &.activeNavlink {
           color: red;
@@ -43,4 +48,3 @@
     }
   }
 }
-

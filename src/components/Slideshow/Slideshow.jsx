@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import style from './Slideshow.module.scss'
 
 export const Slideshow = ({ title, images }) => {
     const [currentImage, setCurrentImage] = useState(0);
@@ -18,9 +19,12 @@ export const Slideshow = ({ title, images }) => {
     }
 
     return (
-        <section>
+        <section className={style.slideshow}>
             <img src={`../src/assets/images/${images[currentImage]}`} alt={`Slide ${currentImage + 1}`} />
-            <h2>{title}</h2>
+            <div>
+            <h1>{title}</h1>
+            <span></span>
+            </div>
         </section>
     );
 };
