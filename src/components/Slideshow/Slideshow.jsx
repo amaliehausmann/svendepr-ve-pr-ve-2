@@ -1,26 +1,26 @@
 import { useEffect, useState } from "react";
 
-export const Slideshow = ({ title }) => {
-    const images = [
-        "image1.jpg",
-        "image2.jpg",
-        "image3.jpg",
-    ];
-
+export const Slideshow = ({ title, images }) => {
     const [currentImage, setCurrentImage] = useState(0);
 
     useEffect(() => {
+        if (!images || images.length === 0) return;
+
         const interval = setInterval(() => {
             setCurrentImage((prevImage) => (prevImage + 1) % images.length);
         }, 3000);
 
         return () => clearInterval(interval);
-    }, [images.length]);
+    }, [images]);
+
+    if (!images || images.length === 0) {
+        return <p>Ingen billeder at vise</p>;
+    }
 
     return (
         <section>
-            <img src={images[currentImage]} alt={`Slide ${currentImage + 1}`} />
-            <h1>{title}</h1>
+            <img src={`../src/assets/images/${images[currentImage]}`} alt={`Slide ${currentImage + 1}`} />
+            <h2>{title}</h2>
         </section>
     );
 };

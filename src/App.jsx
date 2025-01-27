@@ -2,6 +2,7 @@ import './App.scss'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { MainLayout } from './Layouts/MainLayout'
 import { Frontpage } from './pages/Frontpage'
+import { SingleNews } from './pages/singleNews'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
     <Routes>
       <Route path='/' element={<MainLayout/>}>
       <Route index element={<Frontpage/>}></Route>
+      <Route path='/news/:id' element={<SingleNews/>}></Route>
       </Route>
     </Routes>
     </BrowserRouter>

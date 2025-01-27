@@ -9,11 +9,16 @@
 
       &:hover {
         transition: ease 0.3s;
+        background-color: rgba(255, 255, 255, 0.1);
       }
 
       a {
         color: white;
         text-decoration: none;
+
+        &.activeNavlink {
+          color: red;
+        }
       }
     }
   }
@@ -21,26 +26,21 @@
   @media screen and (max-width: 750px) {
     position: absolute;
     top: 100%;
-    left: 0%;
+    left: 0;
     width: 100%;
     box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.16);
     -webkit-box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.16);
+    background-color: #333;
 
     ul {
       flex-direction: column;
 
       li {
         padding: 2vw 4vw;
+        text-align: center;
       }
     }
   }
 }
 
-.activeNavlink {
-  color: red;
-}
-
-.navLink {
-  text-decoration: none;
-}

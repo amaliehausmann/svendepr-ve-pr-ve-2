@@ -1,0 +1,15 @@
+.footerStyling{
+    background-color: white;
+    display: flex;
+
+    article{
+        display: flex;
+        flex-direction: row;
+
+        ul{
+            display: flex;
+            list-style: none;
+            color: grey;
+        }
+    }
+}
