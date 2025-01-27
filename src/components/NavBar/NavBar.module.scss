@@ -1,0 +1,46 @@
+.navStyling {
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      list-style: none;
+      padding: 2vw 4vw;
+
+      &:hover {
+        transition: ease 0.3s;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.16);
+
+    ul {
+      flex-direction: column;
+
+      li {
+        padding: 2vw 4vw;
+      }
+    }
+  }
+}
+
+.activeNavlink {
+  color: red;
+}
+
+.navLink {
+  text-decoration: none;
+}
