@@ -5,6 +5,8 @@ import { Frontpage } from "./pages/Frontpage";
 import { SingleNews } from "./pages/singleNews";
 import { Login } from "./pages/Login";
 import { UserContextProvider } from "./context/userContext";
+import { HotelsDestinantionsCountry } from "./pages/HotelsDestinantionsCountry";
+import { HotelPage } from "./pages/HotelPage";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
               <Route index element={<Frontpage />}></Route>
               <Route path="/news/:id" element={<SingleNews />}></Route>
               <Route path="/login" element={<Login />}></Route>
+              <Route path='/hotels' element={<HotelsDestinantionsCountry/>}></Route>
+              <Route path='/hotels/:slug' element={<HotelPage/>}></Route>
             </Route>
           </Routes>
         </BrowserRouter>
