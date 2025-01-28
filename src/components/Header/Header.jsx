@@ -34,7 +34,7 @@ export const Header = ({ title, subTitle }) => {
 
   return (
     <header className={style.headerStyling}>
-      <img src="../src/assets/images/hotel-overlook-logo.png" alt="" />
+      <img src="/public/hotel-overlook-logo.png" alt="" />
       {isMobile && (
         <span onClick={toggleNav}>
           <IoMenuSharp />

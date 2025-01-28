@@ -20,7 +20,7 @@ export const Slideshow = ({ title, images }) => {
 
     return (
         <section className={style.slideshow}>
-            <img src={`../src/assets/images/${images[currentImage]}`} alt={`Slide ${currentImage + 1}`} />
+            <img src={`../../public/${images[currentImage]}`} alt={`Slide ${currentImage + 1}`} />
             <div>
             <h1>{title}</h1>
             <span></span>

@@ -39,7 +39,9 @@ export const Login = () => {
           setUserData(res);
           setErrorLoginMessage("");
           toast.success(
-            `Du er nu logget ind, velkommen tilbage ${res.user?.firstname || ""}`
+            `Du er nu logget ind, velkommen tilbage ${
+              res.user?.firstname || ""
+            }`
           );
         } else {
           throw new Error("Forkert email eller adgangskode");
@@ -58,13 +60,12 @@ export const Login = () => {
   };
 
   const LogOut = () => {
-    setUserData(null);  // Clear user data from context
-    toast.info("Du er nu logget ud");  // Notify the user
-  
+    setUserData(null); // Clear user data from context
+    toast.info("Du er nu logget ud"); // Notify the user
+
     // Optional: Clear sessionStorage manually in case it's not working as expected
     sessionStorage.removeItem("userData");
   };
-  
 
   return (
     <SectionWrapper customStyling="login">

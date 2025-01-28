@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import style from './Breadcrumb.module.scss';
+import style from "./Breadcrumb.module.scss";
 
 export const Breadcrumb = ({ separator = ">" }) => {
   const location = useLocation();
@@ -8,6 +8,10 @@ export const Breadcrumb = ({ separator = ">" }) => {
 
   const pathNameMapping = {
     hotels: "Hoteller & Destinationer",
+    kobenhavn: "København",
+    goteborg: "Göteborg",
+    jonkobing: "Jönköbing",
+    tromso: "Tromsø",
   };
 
   return (
@@ -22,7 +26,8 @@ export const Breadcrumb = ({ separator = ">" }) => {
           const to = `/${pathnames.slice(0, index + 1).join("/")}`;
           const isLast = index === pathnames.length - 1;
 
-          const displayName = pathNameMapping[item.toLowerCase()] || item;
+          const displayName =
+            pathNameMapping[item] || item.replace(/-/g, " ");
 
           return (
             <li key={to}>

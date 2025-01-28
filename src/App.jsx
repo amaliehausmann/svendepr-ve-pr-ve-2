@@ -5,8 +5,10 @@ import { Frontpage } from "./pages/Frontpage";
 import { SingleNews } from "./pages/singleNews";
 import { Login } from "./pages/Login";
 import { UserContextProvider } from "./context/userContext";
-import { HotelsDestinantionsCountry } from "./pages/HotelsDestinantionsCountry";
-import { HotelPage } from "./pages/HotelPage";
+import { Countries } from "./pages/Countries";
+import { Cities } from "./pages/Cities";
+import { Hotels } from "./pages/Hotels";
+import { SingleHotel } from "./pages/SingleHotel";
 
 function App() {
   return (
@@ -18,8 +20,10 @@ function App() {
               <Route index element={<Frontpage />}></Route>
               <Route path="/news/:id" element={<SingleNews />}></Route>
               <Route path="/login" element={<Login />}></Route>
-              <Route path='/hotels' element={<HotelsDestinantionsCountry/>}></Route>
-              <Route path='/hotels/:slug' element={<HotelPage/>}></Route>
+              <Route path='/hotels' element={<Countries/>}></Route>
+              <Route path='/hotels/:slug' element={<Cities/>}></Route>
+              <Route path='/hotels/:slug/:cityslug' element={<Hotels/>}></Route>
+              <Route path='/hotels/:slug/:cityslug/:hotelslug' element={<SingleHotel/>}></Route>
             </Route>
           </Routes>
         </BrowserRouter>

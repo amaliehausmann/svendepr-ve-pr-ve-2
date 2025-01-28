@@ -1,0 +1,18 @@
+.sideBar{
+    border-left: 2px solid darkgray;
+    margin-left: 4vw;
+
+    padding-left: 2vw;
+
+    ul{
+        margin-top: 1vw;
+        li{
+            list-style: none;
+
+            a{
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+}
