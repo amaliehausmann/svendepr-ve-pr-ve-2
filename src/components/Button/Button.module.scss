@@ -1,0 +1,13 @@
+@use '../../styles/variables' as *;
+//BaseStyling
+.buttonStyling{
+    border: none;
+}
+
+
+//color
+.red{
+    background: radial-gradient(closest-side, #990101, #c40303, $red);
+}
+
+//CustomStyling

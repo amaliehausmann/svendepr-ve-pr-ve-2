@@ -15,7 +15,7 @@ export const InputField = ({
   //Hvis typen ikke er radio eller select
   if (type !== "radio" && type !== "select") {
     return (
-      <div
+      <span
         className={style.InputStyling}
         style={{ display: "flex", flexDirection: "column" }}
       >
@@ -29,8 +29,8 @@ export const InputField = ({
             border: error ? "1px solid orange" : "1px solid #ccc",
           }}
         />
-        {error && <p style={{ color: "orange" }}>{error.message}</p>}
-      </div>
+        {error && <h6 style={{ color: "orange" }}>{error.message}</h6>}
+      </span>
     );
   }
 
@@ -59,7 +59,7 @@ export const InputField = ({
             </label>
           </div>
         ))}
-        {error && <p style={{ color: "orange" }}>{error.message}</p>}
+        {error && <h6 style={{ color: "orange" }}>{error.message}</h6>}
       </div>
     );
   }
@@ -86,7 +86,7 @@ export const InputField = ({
             </option>
           ))}
         </select>
-        {error && <p style={{ color: "orange" }}>{error.message}</p>}
+        {error && <h6 style={{ color: "orange" }}>{error.message}</h6>}
       </div>
     );
   }

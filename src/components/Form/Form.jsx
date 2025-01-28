@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { InputField } from "../InputField/InputField";
 import style from "./Form.module.scss";
 
-export const Form = ({ formArray, callback, buttonText }) => {
+export const Form = ({ formArray, callback, buttonText, children, custom }) => {
   const {
     register,
     handleSubmit,
@@ -16,7 +16,7 @@ export const Form = ({ formArray, callback, buttonText }) => {
   }
 
   return (
-    <form className={style.formStyling} onSubmit={handleSubmit(submit)}>
+    <form className={`${style.formStyling} ${style[custom]}`}  onSubmit={handleSubmit(submit)}>
       {formArray.map((item) => (
         <InputField
           key={item.name}
@@ -30,7 +30,10 @@ export const Form = ({ formArray, callback, buttonText }) => {
           options={item.options}
         />
       ))}
+      <div>
       <input type="submit" value={buttonText} />
+      {children}
+      </div>
     </form>
   );
 };

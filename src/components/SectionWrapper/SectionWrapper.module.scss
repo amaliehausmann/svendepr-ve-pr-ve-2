@@ -1,3 +1,4 @@
+@use '../../styles/variables' as *;
 //Basestyling
 .sectionStyling {
   padding: 4vw 8vw;
@@ -38,5 +39,50 @@
       font-style: italic;
       margin-top: 2vw;
     }
+  }
+}
+
+.login {
+  padding: 4vw 6vw;
+  margin: 1vw;
+
+  section{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    h3 {
+        margin-bottom: 2vw;
+        font-size: 2vw;
+        font-weight: 500;
+      }
+
+      article{
+
+        &:first-of-type{
+            border-right: 2px solid rgb(71, 70, 70);
+            padding-bottom: 17vw;
+        }
+
+        &:nth-of-type(2){
+            padding-left: 2vw;
+            padding-bottom: 23vw;
+
+            button{
+                padding: 1vw 2vw;
+                color: white;
+                border-radius: 5px;
+                margin-top: 5vw;
+            }
+        }
+      }
+    
+      h6 {
+        margin-bottom: 1vw;
+      }
+    
+      input {
+        margin-bottom: 1vw;
+        width: 70%;
+      }
   }
 }

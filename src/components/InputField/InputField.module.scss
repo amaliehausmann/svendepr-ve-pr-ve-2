@@ -1,14 +1,18 @@
 .InputStyling {
-  margin: 1vw 1vw;
 
   label {
     margin-bottom: 0.5vw;
   }
 
   input {
-    padding: 0.5vw 1vw;
+    padding: 1vw;
     border-radius: 5px;
     outline: none;
+    filter: drop-shadow(5px 5px 5px #00000015);
+  }
+
+  ::placeholder{
+    color: rgb(37, 37, 37);
   }
 
   select {

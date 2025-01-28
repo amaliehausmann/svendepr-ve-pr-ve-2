@@ -1,0 +1,23 @@
+.breadcrumb {
+  padding-bottom: 2vw;
+  ul {
+    display: flex;
+    li {
+      list-style: none;
+      color: black;
+      font-size: 0.9vw;
+      span {
+        padding: 0 0.5vw;
+
+        &:nth-child(1) {
+          padding: 0;
+        }
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+}
