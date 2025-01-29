@@ -12,7 +12,7 @@ export const ThreeCardsSection = ({ name, array, action }) => {
             custom="threeCards"
             key={item.id}
             action={() => action(item.id)}
-            image={`../src/assets/images/images/${item.image.filename}`}
+            image={`/public/images/${item.image.filename}`}
             title={item.title}
             description={item.teaser}
           ></Card>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import style from './Slideshow.module.scss'
 
-export const Slideshow = ({ title, images }) => {
+export const Slideshow = ({ title, images, custom }) => {
     const [currentImage, setCurrentImage] = useState(0);
 
     useEffect(() => {
@@ -19,8 +19,8 @@ export const Slideshow = ({ title, images }) => {
     }
 
     return (
-        <section className={style.slideshow}>
-            <img src={`../../public/${images[currentImage]}`} alt={`Slide ${currentImage + 1}`} />
+        <section className={`${style.slideshow} ${style[custom]}`}>
+            <img src={`../../../public/${images[currentImage]}`} alt={`Slide ${currentImage + 1}`} />
             <div>
             <h1>{title}</h1>
             <span></span>

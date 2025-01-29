@@ -5,6 +5,9 @@
 
   div {
     margin-top: 2vw;
+    display: flex;
+    align-items: center;
+
     input {
       background: radial-gradient(closest-side, #990101, #c40303, $red);
       border: none;
@@ -12,7 +15,19 @@
       padding: 1vw 2vw;
       border-radius: 5px;
       filter: drop-shadow(5px 5px 5px #00000015);
-      width: 15%;
+      max-width: fit-content;
+    }
+
+    button {
+      background: radial-gradient(closest-side, #990101, #c40303, $red);
+      border: none;
+      color: white;
+      border-radius: 5px;
+      filter: drop-shadow(5px 5px 5px #00000015);
+      width: 20%;
+      margin-left: 2vw;
+      padding: 1vw;
+      margin-bottom: 1vw;
     }
   }
 }

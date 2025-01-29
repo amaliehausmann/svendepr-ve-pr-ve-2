@@ -6,12 +6,19 @@ import { SectionWrapper } from "../components/SectionWrapper/SectionWrapper";
 import { Breadcrumb } from "../components/Breadcrumb/Breadcrumb";
 import { UserContext } from "../context/userContext";
 import { Button } from "../components/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorLoginMessage, setErrorLoginMessage] = useState("");
 
-  const { setUserData, userData } = useContext(UserContext);
+  const { setUserData, setUserToken, userData } = useContext(UserContext);
+
+  const navigate = useNavigate();
+
+  function handleSignUp() {
+    navigate(`/signup`);
+  }
 
   const SubmitData = (data) => {
     const body = new URLSearchParams();
@@ -37,6 +44,7 @@ export const Login = () => {
 
         if (res.access_token) {
           setUserData(res);
+          setUserToken(res);
           setErrorLoginMessage("");
           toast.success(
             `Du er nu logget ind, velkommen tilbage ${
@@ -60,10 +68,8 @@ export const Login = () => {
   };
 
   const LogOut = () => {
-    setUserData(null); // Clear user data from context
-    toast.info("Du er nu logget ud"); // Notify the user
-
-    // Optional: Clear sessionStorage manually in case it's not working as expected
+    setUserData(null);
+    toast.info("Du er nu logget ud");
     sessionStorage.removeItem("userData");
   };
 
@@ -83,7 +89,7 @@ export const Login = () => {
               <h3>Brugeroplysninger</h3>
               <h6>
                 <b>Navn:</b>{" "}
-                {userData?.user.firstname + " " + userData.user.lastname}
+                {userData?.user?.firstname + " " + userData?.user?.lastname}
               </h6>
               <Button action={LogOut} color="red" title="Log ud" />
             </article>
@@ -96,7 +102,9 @@ export const Login = () => {
               formArray={loginForm}
               callback={SubmitData}
               buttonText={isLoading ? "Logger ind..." : "Login"}
-            />
+            >
+              <Button action={handleSignUp} color='red' title='Tilmeld dig'></Button>
+            </Form>
             {errorLoginMessage && (
               <h4 style={{ color: "orange" }}>{errorLoginMessage}</h4>
             )}

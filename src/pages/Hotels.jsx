@@ -31,6 +31,7 @@ export const Hotels = () => {
     (item) => item.slug !== cityslug
   );
 
+
   return (
     <>
       <Slideshow images={slideshowArray} title="HOTELLER & DESTINATIONER" />
@@ -51,11 +52,12 @@ export const Hotels = () => {
                       handleCardClick(data?.slug, item.slug, hotel.slug)
                     }
                     key={hotel.hotel_id}
-                    image={`/public/images/${hotel.HotelImage.hotel_image_filename}`}
+                    image={`/images/${hotel.HotelImage.hotel_image_filename}`}
                     alttext={hotel.HotelImage.hotel_image_title}
                     title={hotel.title}
                     custom="threeCards"
                     custom2="threeCards3"
+                    on
                   ></Card>
                 ))
               )}
@@ -65,7 +67,7 @@ export const Hotels = () => {
             <h4>Besøg andre byer i {data?.name}</h4>
             <ul>
               {filteredCities?.map((item) => (
-                <li>
+                <li key={item.city_id}>
                   <Link to={`/hotels/${data?.slug}/${item.slug}`}>
                     {`> ${item.name}`}
                   </Link>

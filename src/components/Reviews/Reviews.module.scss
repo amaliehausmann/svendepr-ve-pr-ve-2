@@ -1,0 +1,28 @@
+.ReviewStyling{
+    padding: 4vw 0 1vw 3vw;
+    width: 100%;
+
+    button{
+        padding: 1vw;
+        border-radius: 5px;
+        display: block;
+        margin: auto;
+        color: white;
+        margin-top: 2vw;
+    }
+
+article{
+    height: 60vh;
+    overflow-y: scroll;
+    padding: 0;
+    width: 100%;
+
+    div{
+        padding: 1vw 0;
+        width: 100%;
+        div{
+            padding: 0;
+        }
+    }
+}
+}

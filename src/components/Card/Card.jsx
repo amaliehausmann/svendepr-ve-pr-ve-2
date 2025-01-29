@@ -7,8 +7,8 @@ export const Card = ({image, title, description, children, custom, custom2, acti
         <div>
         <h3>{title}</h3>
         <p>{description}</p>
-        </div>
         {children}
+        </div>
     </div>
   )
 }

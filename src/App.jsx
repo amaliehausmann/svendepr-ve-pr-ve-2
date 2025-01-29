@@ -9,6 +9,7 @@ import { Countries } from "./pages/Countries";
 import { Cities } from "./pages/Cities";
 import { Hotels } from "./pages/Hotels";
 import { SingleHotel } from "./pages/SingleHotel";
+import { Signup } from "./pages/SignUp";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Route path='/hotels/:slug' element={<Cities/>}></Route>
               <Route path='/hotels/:slug/:cityslug' element={<Hotels/>}></Route>
               <Route path='/hotels/:slug/:cityslug/:hotelslug' element={<SingleHotel/>}></Route>
+              <Route path="/SignUp" element={<Signup/>}></Route>
             </Route>
           </Routes>
         </BrowserRouter>

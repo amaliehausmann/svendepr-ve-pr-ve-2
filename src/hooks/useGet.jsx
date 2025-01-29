@@ -1,37 +1,40 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { UserContext } from "../context/userContext";
 
 export const useGet = (url, token) => {
   const [data, setData] = useState();
   const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState();
+  const { setUserToken, userToken } = useContext(UserContext);
 
   useEffect(() => {
+    async function fetchData() {
+      setIsLoading(true);
 
-    async function fetchData(){
-        setIsLoading(true);
+      const options = {
+        headers: token
+          ? {
+              Authorization: `Bearer ${token}`,
+            }
+          : {},
+      };
 
-        const options = {
-          headers: token ? {
-            'Authorization' : `Bearer ${token}`
-          } : {}
+      try {
+        const data = await fetch(url, options);
+        const res = await data.json();
+        setData(res);
+
+        if (res.access_token) {
+          setUserToken(res);
         }
-
-        try {
-          const data = await fetch(url, options);
-          const res = await data.json();
-          setData(res);
-          
-        } catch (err) {
-          setError(err);
-    
-        } finally {
-          setIsLoading(false);
-        }
+      } catch (err) {
+        setError(err);
+      } finally {
+        setIsLoading(false);
+      }
     }
 
     fetchData();
-
-  }, [url]);
+  }, [url, userToken]);
   return { data, error, isLoading };
 };
-
