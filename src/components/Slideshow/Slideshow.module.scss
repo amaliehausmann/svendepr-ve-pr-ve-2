@@ -34,11 +34,85 @@
       border-bottom-right-radius: 100px;
     }
   }
+
+  @media screen and (max-width: 1300px) {
+    img {
+      height: 70vh;
+    }
+
+    div {
+      position: absolute;
+      top: 50%;
+      left: 6vw;
+
+      h1 {
+        padding: 1vw 2vw;
+        padding-right: 6vw;
+        border-bottom-right-radius: 100px;
+      }
+
+      span {
+        width: 50vw;
+        height: 3vh;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    img {
+      height: 65vh;
+    }
+
+    div {
+      position: absolute;
+      top: 50%;
+      left: 4vw;
+
+      h1 {
+        padding: 1vw 2vw;
+        padding-right: 6vw;
+        border-bottom-right-radius: 100px;
+      }
+
+      span {
+        width: 60vw;
+        height: 3vh;
+      }
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    img {
+      height: 65vh;
+    }
+
+    div {
+      position: absolute;
+      top: 50%;
+      left: 2vw;
+
+      h1 {
+        padding: 1vw 2vw;
+        padding-right: 2vw;
+        border-bottom-right-radius: 100px;
+      }
+
+      span {
+        width: 80vw;
+        height: 3vh;
+      }
+    }
+  }
 }
 
-.roomSlide{
-  div{
+.roomSlide {
+  div {
     display: none;
     height: initial;
+  }
+
+  @media screen and (max-width: 1300px) {
+    height: auto;
+    min-height: auto;
   }
 }

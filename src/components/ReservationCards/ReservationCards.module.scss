@@ -1,0 +1,42 @@
+.reservationCard{
+    margin-top: 2vw;
+    min-height: 57vh;
+
+    span{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 1vw;
+        margin-bottom: 0.5vw;
+        h6{
+            margin-bottom: 0;
+        }
+    }
+    
+    ul{
+        li{
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid grey;
+            padding: 1vw 0;
+
+            &:last-of-type{
+                border-bottom: 1px solid grey;
+            }
+
+            button{
+                background-color: transparent;
+                border: none;
+                margin: 0 0.5vw;
+            }
+
+            button:nth-of-type(1){
+                color: #12981b;
+            }
+
+            button:nth-of-type(2){
+                color: red;
+            }
+        }
+    }
+
+}

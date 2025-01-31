@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Breadcrumb } from "../components/Breadcrumb/Breadcrumb";
 import { Slideshow } from "../components/Slideshow/Slideshow";
 import { DestinationNav } from "../components/DestinationNav/DestinationNav";
@@ -15,6 +15,7 @@ import { Reviews } from "../components/Reviews/Reviews";
 export const SingleHotel = () => {
   const { slug, cityslug, hotelslug } = useParams();
   const [room, setRoom] = useState();
+  const navigate = useNavigate();
 
   const { data } = useGet(
     `http://localhost:4000/destinations/${slug}/${cityslug}/${hotelslug}`
@@ -24,7 +25,9 @@ export const SingleHotel = () => {
     `http://localhost:4000/destinations/${slug}/${cityslug}/${hotelslug}/${room}`
   );
 
-
+  function handleButtonClick() {
+    navigate(`/hotels/${slug}/${cityslug}/${hotelslug}/review`);
+  }
 
   return (
     <>
@@ -92,7 +95,11 @@ export const SingleHotel = () => {
                 ))}
               </ul>
             </article>
-            <Reviews id={data?.cities[0]?.hotels[0]?.hotel_id}/>
+            <Reviews
+              id={data?.cities[0]?.hotels[0]?.hotel_id}
+              action={handleButtonClick}
+              button
+            />
           </DestinationSideBar>
         </GridContainer>
       </SectionWrapper>

@@ -58,10 +58,135 @@
       }
     }
   }
+
+  @media screen and (max-width: 1300px) {
+    height: 40vh;
+
+    img {
+      height: 80%;
+    }
+
+    div {
+      padding: 1vw;
+      height: 20%;
+      transition: height 0.3s ease;
+
+      p {
+        display: none;
+      }
+    }
+
+    &:hover {
+      img {
+        height: 40%;
+      }
+
+      div {
+        height: 60%;
+
+        p {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    height: 35vh;
+
+    img {
+      height: 80%;
+    }
+
+    div {
+      padding: 1vw;
+      height: 20%;
+
+      p {
+        display: none;
+      }
+    }
+
+    &:hover {
+      img {
+        height: 0%;
+      }
+
+      div {
+        height: 100%;
+
+        p {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    height: auto;
+
+    img {
+      height: auto;
+    }
+
+    h3 {
+      white-space: normal;
+      padding-bottom: 4vw;
+    }
+
+    div {
+      padding: 4vw;
+      height: auto;
+
+      p {
+        display: block;
+      }
+    }
+
+    &:hover {
+      img {
+        height: auto;
+      }
+
+      div {
+        height: auto;
+      }
+    }
+  }
 }
 
 .threeCards2 {
   height: 55vh;
+
+  @media screen and (max-width: 1300px) {
+    height: 55vh;
+
+    &:hover {
+      img {
+        height: 30%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    height: 45vh;
+
+    &:hover {
+      img {
+        height: 0%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    height: auto;
+
+    &:hover {
+      img {
+        height: auto;
+      }
+    }
+  }
 }
 
 .threeCards3 {
@@ -77,6 +202,42 @@
 
     div {
       height: 35%;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    &:hover {
+      img {
+        height: 70%;
+      }
+
+      div {
+        height: 30%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    &:hover {
+      img {
+        height: 60%;
+      }
+
+      div {
+        height: 40%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    &:hover {
+      img {
+        height: 0%;
+      }
+
+      div {
+        height: 100%;
+      }
     }
   }
 }

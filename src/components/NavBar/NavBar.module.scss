@@ -28,21 +28,35 @@
     }
   }
 
+  @media screen and (max-width: 1300px) {
+    ul {
+      li {
+        padding: 0 2vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    ul {
+      li {
+        padding: 0 1.5vw;
+      }
+    }
+  }
+
   @media screen and (max-width: 750px) {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.16);
-    -webkit-box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.16);
-    -moz-box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.16);
-    background-color: #333;
+    background-color: $black;
+    z-index: 9999;
 
     ul {
       flex-direction: column;
 
       li {
-        padding: 2vw 4vw;
+        padding: 4vw 4vw;
         text-align: center;
       }
     }

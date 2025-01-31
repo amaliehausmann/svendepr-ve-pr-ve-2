@@ -31,7 +31,6 @@ export const Hotels = () => {
     (item) => item.slug !== cityslug
   );
 
-
   return (
     <>
       <Slideshow images={slideshowArray} title="HOTELLER & DESTINATIONER" />
@@ -57,7 +56,6 @@ export const Hotels = () => {
                     title={hotel.title}
                     custom="threeCards"
                     custom2="threeCards3"
-                    on
                   ></Card>
                 ))
               )}

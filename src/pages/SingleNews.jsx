@@ -30,7 +30,7 @@ export const SingleNews = () => {
         </Link>
       </span>
       <h6>{convertUnix(data?.datetime)}</h6>
-      <img src={`../src/assets/images/images/${data?.image.filename}`} alt="" />
+      <img src={`/images/${data?.image.filename}`} alt="" />
       <h6>{data?.content}</h6>
     </SectionWrapper>
   );

@@ -1,9 +1,8 @@
-@use '../styles/placeholders' as *;
-@use '../styles/variables' as *;
+@use "../styles/placeholders" as *;
+@use "../styles/variables" as *;
 
 //Indsæt styling her
 .mainLayout {
-
   //bg color
   background-color: $background;
 
@@ -15,41 +14,41 @@
     font-size: 2.2vw;
 
     @media screen and (max-width: 1300px) {
-      font-size: 4.2vw;
+      font-size: 2.5vw;
     }
 
     @media screen and (max-width: 1050px) {
-      font-size: 5vw;
+      font-size: 3vw;
     }
 
     @media screen and (max-width: 750px) {
-      font-size: 7vw;
+      font-size: 4vw;
     }
   }
 
   h2 {
     font-size: 3.5vw;
     @media screen and (max-width: 1300px) {
-      font-size: 4vw;
-    }
-    @media screen and (max-width: 1050px) {
-      font-size: 4.5vw;
-    }
-    @media screen and (max-width: 750px) {
-      font-size: 6.5vw;
-    }
-  }
-
-  h3 {
-    font-size: 1.7vw;
-    @media screen and (max-width: 1300px) {
-      font-size: 3.5vw;
+      font-size: 3.7vw;
     }
     @media screen and (max-width: 1050px) {
       font-size: 4vw;
     }
     @media screen and (max-width: 750px) {
       font-size: 6vw;
+    }
+  }
+
+  h3 {
+    font-size: 1.7vw;
+    @media screen and (max-width: 1300px) {
+      font-size: 2.2vw;
+    }
+    @media screen and (max-width: 1050px) {
+      font-size: 2.7vw;
+    }
+    @media screen and (max-width: 750px) {
+      font-size: 4vw;
     }
   }
 
@@ -71,42 +70,46 @@
   h5 {
     font-size: 1.3vw;
     @media screen and (max-width: 1300px) {
-      font-size: 2.5vw;
+      font-size: 1.4vw;
     }
     @media screen and (max-width: 1050px) {
-      font-size: 3vw;
+      font-size: 1.5vw;
     }
     @media screen and (max-width: 750px) {
-      font-size: 5vw;
+      font-size: 1.7vw;
     }
   }
 
-  h6, label, ::placeholder, select, input, button {
-    font-size: 1.2vw;
+  h6,
+  label,
+  ::placeholder,
+  select,
+  input,
+  button {
+    font-size: 1.1vw;
     font-weight: 500;
     @media screen and (max-width: 1300px) {
-      font-size: 2.2vw;
-    }
-    @media screen and (max-width: 1050px) {
-      font-size: 2.7vw;
-    }
-    @media screen and (max-width: 750px) {
-      font-size: 4.7vw;
-    }
-  }
-
-  p, a {
-    font-size: 0.9vw;
-    @media screen and (max-width: 1300px) {
-      font-size: 1.3vw;
+      font-size: 1.4vw;
     }
     @media screen and (max-width: 1050px) {
       font-size: 1.8vw;
     }
     @media screen and (max-width: 750px) {
-      font-size: 3.8vw;
+      font-size: 3vw;
     }
   }
 
-  
+  p,
+  a {
+    font-size: 0.9vw;
+    @media screen and (max-width: 1300px) {
+      font-size: 1.1vw;
+    }
+    @media screen and (max-width: 1050px) {
+      font-size: 1.3vw;
+    }
+    @media screen and (max-width: 750px) {
+      font-size: 2.8vw;
+    }
+  }
 }

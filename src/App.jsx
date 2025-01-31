@@ -10,6 +10,10 @@ import { Cities } from "./pages/Cities";
 import { Hotels } from "./pages/Hotels";
 import { SingleHotel } from "./pages/SingleHotel";
 import { Signup } from "./pages/SignUp";
+import { Review } from "./pages/Review";
+import { Reservation } from "./pages/Reservation";
+import { Rooms } from "./pages/Rooms";
+import { PageNotFound } from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -26,6 +30,10 @@ function App() {
               <Route path='/hotels/:slug/:cityslug' element={<Hotels/>}></Route>
               <Route path='/hotels/:slug/:cityslug/:hotelslug' element={<SingleHotel/>}></Route>
               <Route path="/SignUp" element={<Signup/>}></Route>
+              <Route path="/hotels/:slug/:cityslug/:hotelslug/review" element={<Review/>}></Route>
+              <Route path="/reservation" element={<Reservation/>}></Route>
+              <Route path='/rooms' element={<Rooms/>}></Route>
+              <Route path='/*' element={<PageNotFound/>}></Route>
             </Route>
           </Routes>
         </BrowserRouter>

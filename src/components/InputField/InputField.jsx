@@ -12,8 +12,8 @@ export const InputField = ({
 }) => {
   const defaultPlaceholder = placeholder || `Indtast ${label}`;
 
-  //Hvis typen ikke er radio eller select
-  if (type !== "radio" && type !== "select") {
+
+  if (type !== "radio" && type !== "select" && type !== "textarea") {
     return (
       <span
         className={style.InputStyling}
@@ -34,7 +34,27 @@ export const InputField = ({
     );
   }
 
-  // Hvis typen er radio
+  if (type === "textarea") {
+    return (
+      <span
+        className={style.InputStyling}
+        style={{ display: "flex", flexDirection: "column" }}
+      >
+        <label htmlFor={name}>{label}</label>
+        <textarea
+          id={name}
+          placeholder={defaultPlaceholder}
+          {...register(name, validation)}
+          style={{
+            border: error ? "1px solid orange" : "1px solid #ccc",
+            minHeight: "100px", 
+          }}
+        />
+        {error && <h6 style={{ color: "orange" }}>{error.message}</h6>}
+      </span>
+    );
+  }
+
   if (type === "radio") {
     return (
       <div
@@ -64,7 +84,6 @@ export const InputField = ({
     );
   }
 
-  // Hvis typen er Select
   if (type === "select") {
     return (
       <div

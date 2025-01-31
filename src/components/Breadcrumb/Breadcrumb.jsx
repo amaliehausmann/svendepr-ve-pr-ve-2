@@ -16,6 +16,7 @@ export const Breadcrumb = ({ separator = ">" }) => {
     jonkobing: "Jönköbing",
     tromso: "Tromsø",
     "overlook-aalborg-ost": "Overlook Aalborg Øst",
+    review: 'Skriv en anmeldelse'
   };
 
   return (

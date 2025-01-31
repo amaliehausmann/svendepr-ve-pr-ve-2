@@ -32,4 +32,34 @@
       }
     }
   }
+
+  @media screen and (max-width: 1050px){
+
+    nav{
+      background-color: white;
+
+      ul{
+          li{
+            padding: 1vw 4vw;
+          }
+      }
+    }
+
+  }
+
+  @media screen and (max-width: 750px){
+
+    nav{
+      background-color: white;
+      justify-content: flex-start;
+
+      ul{
+        flex-direction: column;
+          li{
+            padding: 3vw 4vw;
+          }
+      }
+    }
+
+  }
 }
